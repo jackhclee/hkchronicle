@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import Book from './Book'
 
 function App() {
 
-  useEffect(() => {
-    const a = async () => {  
-    try {
-      let response = await fetch('https://orientalpearl.herokuapp.com/books');
-      let json = await response.json();
-      console.log('Data from backend')
-      console.log(json);
-    } catch (e) {
-      console.log(e);
-    }
-  }
-  a()
-  });
+  const [books, setBooks ] = useState([])
 
+  const [loaded, setLoaded ] = useState(true)
+  useEffect(() => {
+    const a = async () => {
+      try {
+        let response = await fetch('https://orientalpearl.herokuapp.com/books');
+        let json = await response.json();
+        console.log('Data from backend')
+        console.log(json);
+        setBooks(json)
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    a()
+  },[loaded]);
 
   return (
     <div className="App">
@@ -34,7 +38,9 @@ function App() {
         >
           Learn React!
         </a>
+        <Book books={books} />
       </header>
+
     </div>
   );
 }

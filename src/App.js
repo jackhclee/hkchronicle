@@ -7,7 +7,6 @@ function App() {
 
   const [books, setBooks ] = useState([])
 
-  const [loaded, setLoaded ] = useState(true)
   useEffect(() => {
     const a = async () => {
       try {
@@ -21,7 +20,7 @@ function App() {
       }
     }
     a()
-  },[loaded]);
+  },[]);
 
   return (
     <div className="App">
@@ -40,7 +39,6 @@ function App() {
         </a>
         <Book books={books} />
       </header>
-
     </div>
   );
 }

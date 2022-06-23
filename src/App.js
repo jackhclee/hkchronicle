@@ -38,7 +38,7 @@ function App() {
       <header className="App-header">
         <img src={photoUrl} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         Hong Kong, once the world's city.
         </p>
         <a
           className="App-link"
@@ -46,7 +46,6 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React!
         </a>
         <Book books={books} />
       </header>

@@ -1,9 +1,9 @@
 function Book(props) {
-  let spans = props.books.map(book => <div>{book.id} {book.title}</div>)
+  let listItems = props.books.map(book => <li>{book.id}. {book.title}</li>)
   return (
-    <div>
-       {spans}
-    </div>
+    <ol>
+       {listItems}
+    </ol>
   );
 }
 

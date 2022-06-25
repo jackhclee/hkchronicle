@@ -39,6 +39,7 @@ function App() {
         <img src={photoUrl} className="App-logo" alt="logo" />
         <p>
          Hong Kong, once the world's finest city.
+         <a href="https://www.youtube.com/watch?v=2UltvQ1nkuM">watch a video here</a>
         </p>
         <a
           className="App-link"

@@ -38,7 +38,7 @@ function App() {
       <header className="App-header">
         <img src={photoUrl} className="App-logo" alt="logo" />
         <p>
-         Hong Kong, once the world's city.
+         Hong Kong, once the world's finest city.
         </p>
         <a
           className="App-link"

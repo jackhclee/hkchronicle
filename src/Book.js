@@ -1,5 +1,5 @@
 function Book(props) {
-  let listItems = props.books.map(book => <li>{book.id}. {book.title}</li>)
+  let listItems = props.books.map(book => <li>{book.title}</li>)
   return (
     <ol>
        {listItems}
